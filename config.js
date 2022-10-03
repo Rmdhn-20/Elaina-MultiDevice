@@ -14,6 +14,7 @@
 // • Rasel comel
 // • ImYanXiao
 // • Xtreshe (Beban)
+// • Rmdhn-20 (Recode)
 // • Dll
 
 //[!] Jangan Lupa Ganti Ownernya
@@ -47,35 +48,35 @@ let wibh = moment.tz('Asia/Jakarta').format('HH')
 /*============== SOCIAL ==============*/
 
 // kalo ga punya ketik "-" atau biarin aja biar ada creditsnya :v
-global.sig = 'https://instagram.com/Xiao_yan_21' //Link Instagrammu
-global.sgh = 'https://github.com/ImYanXiao' //Link Githubmu
-global.sgc = 'https://chat.whatsapp.com/DyBMXDw1IshFM9z0ZHZNlR'
+global.sig = 'https://instagram.com/ekuzikaa_18' //Link Instagrammu
+global.sgh = 'https://github.com/Rmdhn-20' //Link Githubmu
+global.sgc = '-'
 global.sdc = '-' //Isi Pake Link Discordmu Kalo Gada Biarin aja
 global.snh = 'https://nhentai.net/g/HaramTod🗿' //Hmmm, Ini boleh kalian isi terserah :v
 
 /*============== PAYMENT ==============*/
-global.pdana = '085736178354' //Nomor Danamu
-global.ppulsa = '085736178354' //Nomor SimCard Yang Kamu Pake
-global.psaweria = 'https://saweria.com/XiaoYan021' //Link Saweriamu Kalo Nggada Ketik - aja
+global.pdana = '08889616144' //Nomor Danamu
+global.ppulsa = '089519009370' //Nomor SimCard Yang Kamu Pake
+global.psaweria = 'https://saweria.com/Ekuzika' //Link Saweriamu Kalo Nggada Ketik - aja
 
 /*============== NOMOR ==============*/
-global.nomorbot = '6281231079387' //Nomor Bot
-global.nomorown = '6285736178354' //Nomor Owner
-global.namebot = 'Elaina BOT' //Nama Bot
-global.nameown = '𝓧𝓲𝓪𝓸 - 𝓨𝓪𝓷' // Nama Owner
+global.nomorbot = '12178605722' //Nomor Bot
+global.nomorown = '628889616144' //Nomor Owner
+global.namebot = 'Exz - BOT' //Nama Bot
+global.nameown = 'єкυzιкα' // Nama Owner
 
 
 /*============== STAFF ==============*/
 global.owner = [
-  ['6285736178354', '❦ 𝚇 𝚒 𝚊 𝚘 - 𝚈𝚊𝚗? 🎐', true] //Ganti jd nomormu sama Namamu
+  ['628889616144', '❦ E X Z 🎐', true] //Ganti jd nomormu sama Namamu
   // [number, dia creator/owner?, dia developer?]
 ] // Put your number here
 global.mods = [] // Want some help?
 global.prems = [] // Premium user bukan disini nambahinnya, ketik .addprem @user 10
 
 
-global.lolkey = 'apikeymu'
-global.xkey = 'APIKEYMU'
+global.lolkey = 'e54205a4ca2caa368cc067bb'
+global.xkey = '33a708cfa36fe5ba'
 /*============== API ==============*/
 global.APIs = { // API Prefix
   // name: 'https://website'
@@ -90,18 +91,18 @@ global.APIs = { // API Prefix
 }
 global.APIKeys = { // APIKey Here
   // 'https://website': 'apikey'
-  'https://api.xteam.xyz': 'APIKEYMU',
+  'https://api.xteam.xyz': '33a708cfa36fe5ba',
   'https://anabotofc.herokuapp.com/': 'AnaBot',
-  'https://api.lolhuman.xyz': 'Apikeymu',
+  'https://api.lolhuman.xyz': 'e54205a4ca2caa368cc067bb',
   'https://zahirr-web.herokuapp.com': 'zahirgans',
   'https://violetics.pw': 'beta'
 }
 // Kata APIKEY itu isi dengan apikey lu sendiri, dengan beli ke website itu
 
 /*============== WATERMARK ==============*/
-global.wm = '                「 ᴇʟᴀɪɴᴀ 𝙱𝙾𝚃 汉  」' //Main Watermark
-global.wm2 = '꒷︶꒷꒥꒷ ‧₊˚ ꒰ฅ˘ᴇʟᴀɪɴᴀ - ᴄʜᴀɴ˘ฅ ꒱ ‧₊˚꒷︶꒷꒥꒷'
-global.wm3 = '⫹⫺ ᴇʟᴀɪɴᴀ 𝙱𝙾𝚃'
+global.wm = '                「 E X Z - 𝙱𝙾𝚃 汉  」' //Main Watermark
+global.wm2 = '꒷︶꒷꒥꒷ ‧₊˚ ꒰ฅ˘є χ z - ᴄʜᴀɴ˘ฅ ꒱ ‧₊˚꒷︶꒷꒥꒷'
+global.wm3 = '⫹⫺ E X Z - 𝙱𝙾𝚃'
 global.botdate = `⫹⫺ 𝗛𝗮𝗿𝗶: ${week} ${date}`
 global.bottime = `𝗪𝗮𝗸𝘁𝘂 : ${wktuwib}`
 global.titlebot = '🎋 ┊ 𝗥𝗣𝗚 ʙᴏᴛ ᴡʜᴀᴛsᴀᴘᴘ'
@@ -330,7 +331,7 @@ global.wait = '```「▰▰▰▱▱▱▱▱▱▱」Loading...```'
 global.eror = '```404 error```'
 global.dtu = 'ɪɴꜱᴛᴀɢʀᴀᴍ'
 global.dtc = 'ᴄᴀʟʟ ᴏᴡɴᴇʀ'
-global.phn = '+62 857-3617-8354'
+global.phn = '+62 888-9616-144'
 
 /*=========== TYPE DOCUMENT ===========*/
 global.dpptx = 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
@@ -371,9 +372,9 @@ global.hsquere = ['⛶','❏','⫹⫺']
 
 /*============== STICKER WM ==============*/
 global.stickpack = '.'
-global.stickauth = `☂︎\n𝗘\nl\na\ni\nn\na\n-\n𝗕\n𝗢\n𝗧\n✦\n\n⫹⫺ Whatsapp BOT\nwa.me/${global.nomorbot}`
+global.stickauth = `☂︎\n𝔼\n𝕂\n𝕌\nℤ\n𝕀\n𝕂\n𝔸\n-\n𝗕\n𝗢\n𝗧\n✦\n\n⫹⫺ Whatsapp BOT\nwa.me/${global.nomorbot}`
 global.packname = 'Cʀᴇᴀᴛᴇᴅ Bʏ'
-global.packname2 = 'ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴇʟᴀɪɴᴀ ʙᴏᴛᴢ'
+global.packname2 = 'ᴄʀᴇᴀᴛᴇᴅ ʙʏ є χ z - ʙᴏᴛᴢ'
 
 global.multiplier = 38 // The higher, The harder levelup
 
