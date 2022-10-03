@@ -1,5 +1,6 @@
 // Script Ori By BochilGaming
 // Ditulis Ulang Oleh ImYanXiao
+// Di recode oleh Ekuzika
 
 import { promises } from 'fs'
 import { join } from 'path'
@@ -314,7 +315,7 @@ let tek = `✧────···[ Dashboard ]···────✧
 ┬
 ├━━━━━━━━━━━━━━━━┈─⋆
 │ ▸ *ᴀᴜᴛʜᴏʀ :* ʙᴏᴄʜɪʟɢᴀᴍɪɴɢ
-┴ ▸ *ᴏᴡɴᴇʀ :* ɪᴍ-ʏᴀɴxɪᴀᴏ
+┴ ▸ *ᴏᴡɴᴇʀ :* ${global.nameown}
 ✧
 ┬ 📌 𝗣𝗶𝗻𝗻𝗲𝗱 :
 │ ʙᴇʀɪ ᴊᴇᴅᴀ ʏᴀʜ ᴋᴀᴋ ^ω^
@@ -578,7 +579,7 @@ const listMessage = {
                 {
                     urlButton: {
                         displayText: `${namebot}`,
-                        url: 'https://github.com/ImYanXiao/Elaina-MultiDevice'
+                        url: 'https://github.com/Rmdhn-20'
                     }
                 },
                 {
@@ -611,9 +612,9 @@ const listMessage = {
         
         //MAIN MENU
       /*conn.sendButton(m.chat, `*${ucapan()}, ${name} 👋*`, text.trim(), await genProfile(conn, m), [['Speedtest', _p + 'speedtest'], ['Owner', _p + 'owner']], false, { quoted: fkon, contextInfo: { externalAdReply: { showAdAttribution: true,
-    mediaUrl: "https://Instagram.com/Xiao_yan_21",
+    mediaUrl: "https://Instagram.com/ekuzikaa_18",
     mediaType: "VIDEO",
-    description: "https://Instagram.com/Xiao_yan_21", 
+    description: "https://Instagram.com/ekuzikaa_18", 
     title: wm,
     body: 'List Menu?',
     thumbnail: thumb,
