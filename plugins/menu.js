@@ -549,7 +549,7 @@ const listMessage = {
     
     
     //------- MENU LOCATION
-    const pre = generateWAMessageFromContent(m.chat, { liveLocationMessage:{
+   /* const pre = generateWAMessageFromContent(m.chat, { liveLocationMessage:{
   degreesLatitude: 34.672314,
   degreesLongitude: 135.484802,
   accuracyInMeters: 100,
@@ -562,7 +562,7 @@ const listMessage = {
   contextInfo: { mentionedJid: [m.sender] }
 }}, { quoted: m
 					})
-
+*/
 //return conn.relayMessage(m.chat, pre.message, { messageId: pre.key.id })
 
 //-------DOC TEMPLATE
