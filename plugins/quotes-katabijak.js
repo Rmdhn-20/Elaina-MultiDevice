@@ -16,6 +16,6 @@ conn.sendButton(m.chat, hasil, author, [
 
 handler.help = ['katabijak']
 handler.tags = ['quotes']
-handler.command = /^(katabijak)$/i
+handler.command = /^(katabijak|bijak)$/i
 
 export default handler
