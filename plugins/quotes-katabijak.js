@@ -1,12 +1,18 @@
-import fetch from 'node-fetch'
-let handler = async(m, { conn, text }) => {
-  let res = await (await fetch('https://api.lolhuman.xyz/api/random/katabijak?apikey=${global.lolkey}'))
-  if (!res.ok) throw await res.text()
-  let json = await res.json()
-  if(!json.result[0]) throw json
-  let { result } = json.result[0]
-m.reply(`${json.result}`)
+//import fetch from 'node-fetch'
+import axios from 'axios'
+
+
+let handler = async(m, { conn, usedPrefix, command }) => {
+  axios.get('https://betabotz-api.herokuapp.com/api/random/katabijak?apikey=BetaBotz')
+  .then((res) => {
+          let hasil = `${res.result}`
+conn.sendButton(m.chat, hasil, author, [
+    ['Next', `${usedPrefix+command}`], 
+], m)
+    })
+        .catch(_ => m.reply('Server RestApi sedang error!'))
 }
+
 handler.help = ['katabijak']
 handler.tags = ['quotes']
 handler.command = /^(katabijak)$/i
