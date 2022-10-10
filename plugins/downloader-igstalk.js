@@ -6,7 +6,7 @@ import axios from 'axios'
 
 let handler= async (m, { conn, args, usedPrefix, command }) => {
     if (!args[0]) throw `Example use ${usedPrefix}${command} <username>`
-    axios.get(`https://betabotz-api.herokuapp.com/api/stalk/ig?username=${args[1]}&apikey=BetaBotz`)
+    axios.get(`https://betabotz-api.herokuapp.com/api/stalk/ig?username=${args[0]}&apikey=BetaBotz`)
     .then((res) => {
         let hasilnya = res.data.result
         let sendny = `\n\n*> Username:* ${hasilnya.username}\n*> Fullname:* ${hasilnya.fullName}\n*> Followers:* ${hasilnya.followers}\n*> Following:* ${hasilnya.following}\n*> Post:* ${hasilnya.postsCount}\n*> Bio:* ${hasilnya.bio}\n\n`
