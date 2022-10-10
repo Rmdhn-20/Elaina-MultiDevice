@@ -14,7 +14,7 @@ let handler = async(m, { conn, usedPrefix, command }) => {
 
 
 handler.help = ['cogan']
-handler.tags = ['internet']
+handler.tags = ['asupan']
 handler.command = /^(cogan)$/i
 
 export default handler
