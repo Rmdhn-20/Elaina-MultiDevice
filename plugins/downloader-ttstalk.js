@@ -3,6 +3,7 @@ import axios from 'axios'
 
 
 let handler = async(m, { conn, text, usedPrefix, command }) => {
+  if (!text) throw `Example use ${usedPrefix}${command} <username>`
   axios.get('http://m.caliph.my.id/api/tiktokuser.php?usr=' + text)
   .then((res) => {
           let resnya = res.data.result
