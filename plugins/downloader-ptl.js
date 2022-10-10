@@ -5,7 +5,7 @@ import fetch from 'node-fetch'
 
 let handler = async(m, { conn, usedPrefix, command }) => {
   conn.reply(m.chat, 'Proses...')
-  let res = await getBuffer(`https://ziy.herokuapp.com/api/asupan2k?apikey=xZiyy`)
+  let res = `https://ziy.herokuapp.com/api/asupan2k?apikey=xZiyy`
   conn.sendButtonVid(m.chat, res, `Nih kak...`, wm, 'Next', `${usedPrefix+command}`, m)
 }
 
