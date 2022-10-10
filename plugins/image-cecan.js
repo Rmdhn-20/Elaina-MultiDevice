@@ -4,7 +4,7 @@ import fetch from 'node-fetch'
 
 
 let handler = async(m, { conn, usedPrefix, command }) => {
-  conn.reply(m.chat, 'Proses...', ftrol)
+  conn.reply(m.chat, 'Proses...')
   let res = `https://ziy.herokuapp.com/api/cecan2k?apikey=xZiyy`
   conn.sendButton(m.chat, `Nih kak...`, author, res, [
     ['Menu', `.? all`],
