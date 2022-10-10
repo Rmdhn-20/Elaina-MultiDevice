@@ -15,6 +15,6 @@ let handler = async(m, { conn, usedPrefix, command }) => {
 
 handler.help = ['ptl']
 handler.tags = ['asupan']
-handler.command = /^(asupan)$/i
+handler.command = /^(ptl)$/i
 
 export default handler
