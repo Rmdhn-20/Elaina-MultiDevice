@@ -4,7 +4,7 @@ import fetch from 'node-fetch'
 
 
 let handler = async(m, { conn, usedPrefix, command }) => {
-  conn.reply(m.chat, 'Proses...', ftrol)
+  conn.reply(m.chat, 'Proses...')
   let res = `https://betabotz-api.herokuapp.com/api/wallpaper/aesthetic?apikey=BetaBotz`
   conn.sendButton(m.chat, `Nih kak...`, author, res, [
     ['Menu', `.? all`],
