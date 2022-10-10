@@ -61,7 +61,7 @@ const defaultMenu = {
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
 	let tags
 	let teks = `${args[0]}`.toLowerCase()
-  let arrayMenu = ['all', 'anime', 'update', 'maker', 'edukasi', 'news', 'random', 'game', 'xp', 'islamic', 'stiker', 'rpg', 'kerangajaib', 'quotes', 'admin', 'group', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database','quran', 'vote', 'nsfw', 'audio', 'jadibot', 'info', 'owner', 'nocategory']
+  let arrayMenu = ['all', 'asupan', 'anime', 'update', 'maker', 'edukasi', 'news', 'random', 'game', 'xp', 'islamic', 'stiker', 'rpg', 'kerangajaib', 'quotes', 'admin', 'group', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database','quran', 'vote', 'nsfw', 'audio', 'jadibot', 'info', 'owner', 'nocategory']
   if (!arrayMenu.includes(teks)) teks = '404'
   if (teks == 'all') tags = {
   'main': 'Main',
@@ -72,6 +72,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
   'kerang': 'Kerang Ajaib',
   'quotes': 'Quotes',
   'fun': 'Fun',
+  'asupan': 'Asupan',
   'anime': 'Anime',
   'admin': 'Admin',
   'group': 'Group',
@@ -154,6 +155,9 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
   }
   if (teks == 'fun') tags = {
     'fun': 'Fun'
+  }
+  if (teks == 'asupan') tags = {
+    'asupan': 'Asupan'
   }
   if (teks == 'database') tags = {
     'database': 'Database'
@@ -262,7 +266,6 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
 	title: `${htki} ᴍᴀɪɴ ${htka}`,
 	rows: [
 	    {title: `⚡ ${pmenus} 𝚂𝙿𝙴𝙴𝙳 𝙱𝙾𝚃`, rowId: ".ping", description: "𝙼𝚎𝚗𝚊𝚖𝚙𝚒𝚕𝚔𝚊𝚗 𝙺𝚎𝚌𝚎𝚙𝚊𝚝𝚊𝚗 𝚁𝚎𝚜𝚙𝚘𝚗 𝙱𝙾𝚃"},
-	    {title: `⏰ ${pmenus} 𝚁𝚄𝙽𝚃𝙸𝙼𝙴 𝙱𝙾𝚃`, rowId: ".runtime", description: "𝙼𝚎𝚗𝚊𝚖𝚙𝚒𝚕𝚔𝚊𝚗 𝚆𝚊𝚔𝚝𝚞 𝙱𝙾𝚃 𝙱𝚎𝚛𝚓𝚊𝚕𝚊𝚗"}, 
 	    {title: `💌 ${pmenus} 𝙾𝚆𝙽𝙴𝚁 𝙱𝙾𝚃`, rowId: ".creator", description: "𝙼𝚎𝚗𝚊𝚖𝚙𝚒𝚕𝚔𝚊𝚗 𝙸𝚗𝚏𝚘𝚛𝚖𝚊𝚜𝚒 𝚃𝚎𝚗𝚝𝚊𝚗𝚐 𝙾𝚠𝚗𝚎𝚛"},
 	    {title: `📔 ${pmenus} 𝚂𝙲𝚁𝙸𝙿𝚃 𝙱𝙾𝚃`, rowId: ".sc", description: `𝚂𝚘𝚞𝚛𝚌𝚎 𝙲𝚘𝚍𝚎 ${namebot}`},
 	]
@@ -279,6 +282,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
 	{title: `✨ ${pmenus} Exp`, rowId: ".? xp", description: "Ayo tingkatkan pangkat mu!"},
 	{title: `🎮 ${pmenus} Game`, rowId: ".? game", description: "Gamenya seru seru lho (๑˃̵　ᴗ　˂̵)"},
 	{title: `🧩 ${pmenus} Fun`, rowId: ".? fun", description: "Fitur yang aman untuk keluarga"},
+	{title: `🔞 ${pmenus} Asupan`, rowId: ".? asupan", description: "Fitur penyegar timeline (18+)"},
 	{title: `🐚 ${pmenus} Kerang`, rowId: ".? kerangajaib", description: "Tanyakan pada ketua club"},
 	{title: `📑 ${pmenus} Quotes`, rowId: ".? quotes", description: "Random Inspirasi"},
 	{title: `⛩️ ${pmenus} Anime`, rowId: ".? anime", description: "Wibu wibu🐦"},
