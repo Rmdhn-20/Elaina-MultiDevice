@@ -1,13 +1,26 @@
-import { wallpaper, wallpaperv2 } from '@bochilteam/scraper'
+// Fix By Ekuzika
+
+import { googleImage } from '@bochilteam/scraper'
 let handler = async (m, { conn, text, usedPrefix, command }) => {
     if (!text) throw `Use example ${usedPrefix}${command} Minecraft`
-    const res = await (/2/.test(command) ? wallpaperv2 : wallpaper)(text)
-    const img = res[Math.floor(Math.random() * res.length)]
-    conn.sendFile(m.chat, img, 'wallpaper.jpg', `Result from *${text}*`, m)
+    const textny = `wallpaper ${text}`
+    const res = await googleImage(textny)
+    let image = res.getRandom()
+    let link = image
+    conn.sendButton(m.chat, `
+*${htki} ᴡᴀʟʟᴘᴀᴘᴇʀ sᴇᴀʀᴄʜ ${htka}*
+🔎 *Result:* ${textny}
+🌎 *Source:* Google
+🔗 *Link:* ${link}
+`, wm2, link, [
+      ['Menu', `.? all`],
+      ['Next', `${usedPrefix+command} ${text}`],
+    ], m)
 }
-handler.help = ['', '2'].map(v => 'wallpaper' + v + ' <query>')
+handler.help = ['wallpaper <query>']
 handler.tags = ['downloader']
 
-handler.command = /^(wallpaper2?)$/i
+handler.command = /^(wallpaper)$/i
 
 export default handler
+
