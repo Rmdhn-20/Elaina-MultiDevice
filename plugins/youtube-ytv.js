@@ -7,21 +7,19 @@ let handler = async(m, { conn, args, isPrems, isOwner }) => {
 	let { title, channel_name, published_at, viewers, likes, comments, quality, size, duration, thumbnail, url } = restnya.result
 	let tiny = await fetchJson(`https://api-xcoders.site/api/tools/tinyurl?url=${url}&apikey=cyXNcMnw3x`)
 	let shorturl = tiny.result
-    let isLimit = (isPrems || isOwner ? 99 : limit) * 1024 < size
+    let isLimit = (isPrems || isOwner ? 99 : limit) * 1024 
     conn.reply(isLimit ? `Ukuran File: ${size}\nUkuran file diatas ${limit}MB, silahkan download sendiri: ${shorturl}` : global.wait, m)
     m.reply(wait)
     if (!isLimit) await conn.sendButtonVid(m.chat, url, `*Title:* ${title}\n*Filesize:* ${size}\n*Duration:* ${duration}\n*Quality:* ${quality}\n*Viewers:* ${viewers}\n*Likes:* ${likes}`.trim(), wm, 'menu', '.?', m)
-	//await conn.sendMessage(m.chat, { document: { url: dl_link }, mimetype: 'video/mp4', fileName: title + `.mp4`}, {quoted: m})
-//conn.sendFile(m.chat, dl_link, title + '.mp4', `
-//*Title:* ${title}
-//*Filesize:* ${filesizeF}
-//   `.trim(), m, false, { thumbnail: Buffer.alloc(0), mimetype: 'video/mp4' })
 }
 handler.help = ['ytmp4 <query>']
 handler.tags = ['downloader']
 handler.command = /^yt(v(idi?e?o)?|mp4)?$/i
 
-export default andler
+handler.exp = 0
+handler.register = false
+
+export default handler
 
 
 const fetchJson = (url, options) => new Promise(async (resolve, reject) => {
