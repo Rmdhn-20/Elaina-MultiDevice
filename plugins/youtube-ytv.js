@@ -1,7 +1,6 @@
 let limit = 80
 import fetch from 'node-fetch'
 import axios from 'axios'
-import { servers, ytv } from '../lib/y2mate.js'
 import { youtubeSearch, youtubedl, youtubedlv2, youtubedlv3 } from '@bochilteam/scraper';
 
 let handler = async (m, { conn, groupMetadata, usedPrefix, text, args, command, isPrems, isOwner }) => {
@@ -75,14 +74,13 @@ let caption = `*${htki} YOUTUBE ${htka}*
 _Jika kamu ingin mendownload sendiri, klik link dibawah:_
 ${v.result.url}
 `
-await conn.sendButtonVid(m.chat, vidny.url, `${caption}`.trim(), wm, 'Menu', '.? all', m)
-  }
+await conn.sendButtonVid(m.chat, vidny.url, caption, wm, 'Menu', '.? all', m)
+}
 }
 
-
-handler.help = ['ytmp4 <query>', 'mp4 <query>']
+handler.help = ['mp4', 'v', ''].map(v => 'yt' + v + ` <url> <without message>`)
 handler.tags = ['downloader']
-handler.command = /^yt(v(idi?e?o)?|mp4)?$/i
+handler.command = /^y(outube(mp4|vdl)|t((mp4|v)|vdl))$/i
 
 handler.exp = 0
 handler.register = false
