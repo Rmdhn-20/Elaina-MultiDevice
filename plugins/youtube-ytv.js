@@ -62,6 +62,8 @@ try {
 	let res = await fetch(`https://api-xcoders.site/api/download/ytmp4?url=${args[0]}&apikey=cyXNcMnw3x`)
 let v = await res.json()
 let vidny = v.result.url
+let surl = await fetch(`https://api-xcoders.site/api/tools/tinyurl?url=${vidny}&apikey=cyXNcMnw3x`)
+let o = await surl.json()
 let caption = `*${htki} YOUTUBE ${htka}*
 *title:* ${v.result.title}
 *viewers:* ${v.result.viewers}
@@ -69,6 +71,10 @@ let caption = `*${htki} YOUTUBE ${htka}*
 *size:* ${v.result.size}
 *quality:* ${v.result.quality}
 *published:* ${v.result.published_at}
+
+
+_Jika kamu ingin mendownload sendiri, klik link dibawah:_
+${o.result}
 `
 await conn.sendButtonVid(m.chat, vidny, `${caption}`.trim(), wm, 'Menu', '.? all', m)
   }
