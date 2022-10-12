@@ -2,6 +2,7 @@ let limit = 80
 import fetch from 'node-fetch'
 import axios from 'axios'
 import { servers, ytv } from '../lib/y2mate.js'
+import { youtubeSearch, youtubedl, youtubedlv2, youtubedlv3 } from '@bochilteam/scraper';
 
 let handler = async (m, { conn, groupMetadata, usedPrefix, text, args, command, isPrems, isOwner }) => {
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
