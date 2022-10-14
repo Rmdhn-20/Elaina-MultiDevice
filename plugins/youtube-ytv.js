@@ -1,5 +1,5 @@
-// Source? https://github.com/AyGemuy/
-// Recode by Ekuzika
+// Fix By Ekuzika
+// Source? https://github.com/WH-MODS-BOT
 let limit = 80
 import fetch from 'node-fetch'
 import axios from 'axios'
@@ -9,10 +9,11 @@ let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? c
 let pp = await conn.profilePictureUrl(who).catch(_ => hwaifu.getRandom())
 let name = await conn.getName(who)
 if (!args || !args[0]) throw 'Uhm... urlnya mana?'
+  conn.reply(m.chat, `_Tunggu sebentar, sedang memuat file_`)
 try {
   let chat = global.db.data.chats[m.chat]
   const isY = /y(es)/gi.test(args[1])
-  const { thumbnail, video: _video, title} = await youtubedl(args[0]).catch(async _ => await youtubedlv2(args[0])).catch(async _ => await youtubedlv3(args[0]))
+  const { thumbnail, video: _video, title} = await youtubedlv2(args[0]).catch(async _ => await youtubedl(args[0])).catch(async _ => await youtubedlv3(args[0]))
   const limitedSize = (isPrems || isOwner ? 99 : limit) * 1024
   let video, source, res, link, lastError, isLimit
   for (let i in _video) {
@@ -35,31 +36,25 @@ try {
   if (!isY && !isLimit) await conn.sendFile(m.chat, thumbnail, 'thumbnail.jpg', `
 *${htki} YOUTUBE ${htka}*
 *${htjava} Title:* ${title}
+*${htjava} Quality:* 360p
 *${htjava} Filesize:* ${video.fileSizeH}
 `.trim(), m)
   let _thumb = {}
   try { _thumb = { thumbnail: await (await fetch(thumbnail)).buffer() } }
   catch (e) { }
-  if (!isLimit) await conn.sendButton(m.chat, `*${htki} YOUTUBE ${htka}*
+  if (!isLimit) await conn.sendFile(m.chat, link, title + '.mp4', `
+*${htki} YOUTUBE ${htka}*
 *${htjava} Title:* ${title}
-*${htjava} Filesize:* ${video.fileSizeH}`, title + '.mp4', await(await fetch(link)).buffer(), [['🎀 Menu', '/menu']], m, {
-            fileLength: fsizedoc,
-            seconds: fsizedoc,
-            jpegThumbnail: Buffer.alloc(0), contextInfo: {
-            mimetype: 'video/mp4',
-          externalAdReply :{
-    body: 'Size: ' + video.fileSizeH,
-    containsAutoReply: true,
-    mediaType: 2, 
-    mediaUrl: args[0],
-    showAdAttribution: true,
-    sourceUrl: args[0],
-    thumbnailUrl: thumbnail,
-    renderLargerThumbnail: true,
-    title: 'Nihh Kak, ' + name,
-     }}
+*${htjava} Quality:* 360p
+*${htjava} Filesize:* ${video.fileSizeH}
+
+*${htjava} Download From:*
+${args[0]}
+`.trim(), m, false, {
+    ..._thumb,
+    asDocument: chat.useDocument
   })
-  } catch {
+} catch {
   try {
 let res = await axios('https://violetics.pw/api/downloader/youtube?apikey=beta&url=' + text)
 let json = res.data
