@@ -4,10 +4,10 @@ import axios from 'axios'
 // import { youtubeSearch, youtubedl, youtubedlv2, youtubedlv3 } from '@bochilteam/scraper';
 
 let handler = async (m, { conn, usedPrefix, text, args, command }) => {
-
+	if (!args[0]) throw `Link nya mana??`
 	axios.get(`https://api-xcoders.site/api/download/ytmp4?url=${args[0]}&apikey=cyXNcMnw3x`)
 .then((res) => {
-let video = res.result.url
+let video = res.result
 let caption = `*${htki} YOUTUBE ${htka}*
 *title:* ${res.result.title}
 *viewers:* ${res.result.viewers}
@@ -17,7 +17,7 @@ let caption = `*${htki} YOUTUBE ${htka}*
 *published:* ${res.result.published_at}
 
 `
-await conn.sendMessage(m.chat, { video: { url: video }, caption: caption }, { quoted: m })
+await conn.sendMessage(m.chat, { video: { url: video.url }, caption: `${caption}` }, { quoted: m })
 	})
 	.catch(_ => m.reply(`Server restapi sedang error...`))
 }
