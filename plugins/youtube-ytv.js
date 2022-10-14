@@ -16,7 +16,7 @@ let caption = `*${htki} YOUTUBE ${htka}*
 *published:* ${v.result.published_at}
 
 `
-await conn.sendMessage(m.chat, { video: { url: v.result.url }, caption: caption }, { quoted: ftrol })
+await conn.sendMessage(m.chat, { video: { url: v.result.url }, caption: caption }, { quoted: m })
 }
 
 
