@@ -5,18 +5,21 @@ import axios from 'axios'
 
 let handler = async (m, { conn, usedPrefix, text, args, command }) => {
 
-	let res = await fetch(`https://api-xcoders.site/api/download/ytmp4?url=${args[0]}&apikey=cyXNcMnw3x`)
-let v = await res.json()
+	axios.get(`https://api-xcoders.site/api/download/ytmp4?url=${args[0]}&apikey=cyXNcMnw3x`)
+.then((res) => {
+let video = res.result.url
 let caption = `*${htki} YOUTUBE ${htka}*
-*title:* ${v.result.title}
-*viewers:* ${v.result.viewers}
-*likes:* ${v.result.likes}
-*size:* ${v.result.size}
-*quality:* ${v.result.quality}
-*published:* ${v.result.published_at}
+*title:* ${res.result.title}
+*viewers:* ${res.result.viewers}
+*likes:* ${res.result.likes}
+*size:* ${res.result.size}
+*quality:* ${res.result.quality}
+*published:* ${res.result.published_at}
 
 `
-await conn.sendMessage(m.chat, { video: { url: v.result.url }, caption: caption }, { quoted: m })
+await conn.sendMessage(m.chat, { video: { url: video }, caption: caption }, { quoted: m })
+	})
+	.catch(_ => m.reply(`Server restapi sedang error...`))
 }
 
 
