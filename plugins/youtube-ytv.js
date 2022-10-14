@@ -4,8 +4,8 @@ import axios from 'axios'
 // import { youtubeSearch, youtubedl, youtubedlv2, youtubedlv3 } from '@bochilteam/scraper';
 
 let handler = async (m, { conn, usedPrefix, text, args, command }) => {
-	if (!args[0]) throw `Link nya mana??`
-	axios.get(`https://api-xcoders.site/api/download/ytmp4?url=${args[0]}&apikey=cyXNcMnw3x`)
+	if (!text) throw `Link nya mana??`
+	axios.get(`https://api-xcoders.site/api/download/ytmp4?url=${text}&apikey=cyXNcMnw3x`)
 .then((res) => {
 let video = res.result
 let caption = `*${htki} YOUTUBE ${htka}*
