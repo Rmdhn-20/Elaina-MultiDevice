@@ -7,7 +7,6 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
 
 	let res = await fetch(`https://api-xcoders.site/api/download/ytmp4?url=${args[0]}&apikey=cyXNcMnw3x`)
 let v = await res.json()
-let vidny = await (await fetch(v.result.url)).buffer()
 let caption = `*${htki} YOUTUBE ${htka}*
 *title:* ${v.result.title}
 *viewers:* ${v.result.viewers}
@@ -16,11 +15,8 @@ let caption = `*${htki} YOUTUBE ${htka}*
 *quality:* ${v.result.quality}
 *published:* ${v.result.published_at}
 
-
-_Jika kamu ingin mendownload sendiri, klik link dibawah:_
-${vidny}
 `
-await conn.sendMessage(m.chat, { video: { url: vidny }, caption: caption }, m)
+await conn.sendMessage(m.chat, { video: { url: v.result.url }, caption: caption }, { quoted: ftrol })
 }
 
 
