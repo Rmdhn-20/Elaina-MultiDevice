@@ -62,13 +62,18 @@ global.psaweria = 'https://saweria.com/Ekuzika' //Link Saweriamu Kalo Nggada Ket
 /*============== NOMOR ==============*/
 global.nomorbot = '12178605722' //Nomor Bot
 global.nomorown = '628889616144' //Nomor Owner
-global.namebot = 'Exz - BOT' //Nama Bot
-global.nameown = 'єкυzιкα' // Nama Owner
+global.nameown = 'E̢̢̻ͮͧͦ͋͞͡k̼̼̞̦̞̼̔ụ̴̴̾̀͟͡z̰̰̝̿ͣ͝͡͝i̧̻̻͉̜͑ͪ̾͟k̼̼̞̦̞̼̔A̳̳̹̟̋ͣ͌ͅ' // Nama Owner
+global.namagh = 'Rmdhn-20' // Nama anonym lu
 
+/*============= NAMA BOT ===============*/
+global.namebot = 'нιиαтα - вσтz' //Nama Bot
+global.namebot2 = 'ℍ𝕚𝕟𝕒𝕥𝕒 - 𝔹𝕠𝕥ℤ' //Nama Bot fake2
+global.namebot3 = 'ℌ𝔦𝔫𝔞𝔱𝔞 - 𝔅𝔬𝔱' //Nama Bot fake3
 
 /*============== STAFF ==============*/
 global.owner = [
-  ['628889616144', '❦ E X Z 🎐', true] //Ganti jd nomormu sama Namamu
+  ['628889616144', `❦ ${nameown} 🎐`, true],
+    ['628889616144', `❦ ${nameown} 🎐`, true]//Ganti jd nomormu sama Namamu
   // [number, dia creator/owner?, dia developer?]
 ] // Put your number here
 global.mods = [] // Want some help?
@@ -100,11 +105,12 @@ global.APIKeys = { // APIKey Here
 // Kata APIKEY itu isi dengan apikey lu sendiri, dengan beli ke website itu
 
 /*============== WATERMARK ==============*/
-global.wm = '               「 E X Z - 𝙱𝙾𝚃 汉  」' //Main Watermark
-global.wm2 = '꒷︶꒷꒥꒷ ‧₊˚ ꒰ฅ˘є χ z - ᴄʜᴀɴ˘ฅ ꒱ ‧₊˚꒷︶꒷꒥꒷'
-global.wm3 = '⫹⫺ E X Z - 𝙱𝙾𝚃'
-global.botdate = `⫹⫺ 𝗛𝗮𝗿𝗶: ${week} ${date}`
-global.bottime = `𝗪𝗮𝗸𝘁𝘂 : ${wktuwib}`
+global.wm = `              「  ${namebot3} 汉  」` //Main Watermark
+global.wm2 = `  ꒷︶꒷꒥꒷ ‧₊˚ ꒰ฅ˘${namebot} - ᴄʜᴀɴ˘ฅ ꒱ ‧₊˚꒷︶꒷꒥꒷`
+global.wm3 = `⫹⫺ ${namebot2}`
+global.botdate = `⫹⫺ 𝗛𝗮𝗿𝗶: ${week} ${date}\n⫹⫺ 𝗪𝗮𝗸𝘁𝘂 : ${wktuwib}`
+global.bottime = `⫹⫺ 𝗪𝗮𝗸𝘁𝘂 : ${wktuwib}`
+global.bottime2 = `${wktuwib}`
 global.titlebot = '🎋 ┊ 𝗥𝗣𝗚 ʙᴏᴛ ᴡʜᴀᴛsᴀᴘᴘ'
 global.author = global.wm
 global.logo = 'https://ibb.co/17RY7x9'
@@ -365,16 +371,18 @@ global.pmenus = '┊'                              //pembatas menu selector
 
 global.htki = '––––––『' // Hiasan Titile (KIRI)
 global.htka = '』––––––' // Hiasan Title  (KANAN)
+global.htkip = '–––『' // Hiasan Titile PENDEK (KIRI)
+global.htkap = '』–––'// Hiasan Title PENDEK  (KANAN)
 global.lopr = 'Ⓟ' //LOGO PREMIUM ON MENU.JS
 global.lolm = 'Ⓛ' //LOGO LIMIT/FREE ON MENU.JS
 global.htjava = '⫹⫺'    //hiasan Doang :v
 global.hsquere = ['⛶','❏','⫹⫺']
 
 /*============== STICKER WM ==============*/
-global.stickpack = '.'
-global.stickauth = `☂︎\nH\nI\nN\nA\nT\nA\n-\nB\nO\nT\n✦\n\n⫹⫺ Whatsapp BOT\nwa.me/${global.nomorbot}`
-global.packname = 'Cʀᴇᴀᴛᴇᴅ Bʏ'
-global.packname2 = 'ᴄʀᴇᴀᴛᴇᴅ ʙʏ є χ z - ʙᴏᴛᴢ'
+global.stickpack = `–––『  ${namebot2}  』–––\n\n\nMau bikin sticker tapi gamau ribet? silahkan pc owner dan minta nomor bot >_<`
+global.stickauth = `☂︎ Created By © ${nameown}\n\n⫹⫺ WhatsApp\nwa.me/${nomorown}`
+global.packname = `Cʀᴇᴀᴛᴇᴅ Bʏ ${htkip}  ${namebot2}  ${htkap}`
+global.packname2 = `ᴄʀᴇᴀᴛᴇᴅ ʙʏ ${htkip}  ${namebot3}  ${htkap}`
 
 global.multiplier = 38 // The higher, The harder levelup
 
