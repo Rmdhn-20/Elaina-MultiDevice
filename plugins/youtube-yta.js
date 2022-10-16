@@ -33,7 +33,7 @@ let handler = async (m, { conn, args, isPrems, isOwner }) => {
 *${htjava} Filesize:* ${audio.fileSizeH}
 
 *${htjava} Download from:*
-${args[0]}
+${source}
 
 
 *L O A D I N G. . .*
