@@ -1,5 +1,7 @@
+
 // Fix By Ekuzika
 // Source? https://github.com/WH-MODS-BOT
+
 let limit = 80
 import fetch from 'node-fetch'
 import axios from 'axios'
@@ -10,7 +12,7 @@ let pp = await conn.profilePictureUrl(who).catch(_ => hwaifu.getRandom())
 let name = await conn.getName(who)
 if (!args || !args[0]) throw 'Uhm... urlnya mana?'
   conn.reply(m.chat, `_Tunggu sebentar, sedang memuat file_`)
-try {
+
   let chat = global.db.data.chats[m.chat]
   const isY = /y(es)/gi.test(args[1])
   const { thumbnail, video: _video, title} = await youtubedlv2(args[0]).catch(async _ => await youtubedl(args[0])).catch(async _ => await youtubedlv3(args[0]))
@@ -38,6 +40,11 @@ try {
 *${htjava} Title:* ${title}
 *${htjava} Quality:* 360p
 *${htjava} Filesize:* ${video.fileSizeH}
+
+*${htjava} Download From:*
+${link}
+
+*L O A D I N G . . .*
 `.trim(), m)
   let _thumb = {}
   try { _thumb = { thumbnail: await (await fetch(thumbnail)).buffer() } }
@@ -48,47 +55,14 @@ try {
 *${htjava} Quality:* 360p
 *${htjava} Filesize:* ${video.fileSizeH}
 
-*${htjava} Download From:*
-${args[0]}
 `.trim(), m, false, {
     ..._thumb,
     asDocument: chat.useDocument
   })
-} catch {
-  try {
-let res = await axios('https://violetics.pw/api/downloader/youtube?apikey=beta&url=' + text)
-let json = res.data
-let dapet = json.result.url
-	let row = Object.values(dapet).map((v, index) => ({
-		title: htjava + '📌 Quality: ' + v.subname,
-		description: '\n⌚ Host: ' + json.result.hosting + '\n⏲️ Title: ' + json.result.meta.title + '\n📎 URL: ' + v.url + '\n📌 Source: ' + json.result.meta.source + '\n📌 Duration: ' + json.result.meta.duration,
-		rowId: usedPrefix + 'ytv ' + v.url
-	}))
-	let button = {
-		buttonText: `☂️ ${command} Search Disini ☂️`,
-		description: `⚡ Hai ${name}, Silakan pilih ${command} Search di tombol di bawah...\n*Teks yang anda kirim:* ${text}\n\nKetik ulang *${usedPrefix + command}* teks anda untuk mengubah teks lagi`,
-		footerText: wm
-	}
-	return conn.sendListM(m.chat, button, row, m)
-  } catch {
-  let res = await fetch(`https://rest-beni.herokuapp.com/api/youtube?url=${args[0]}`)
-let v = await res.json()
-let caption = `*${htki} YOUTUBE ${htka}*
-*ID:* ${v.result.id}
-*title:* ${v.result.title}
-*size:* ${v.result.size}
-*quality:* ${v.result.quality}
-`
-await conn.sendButton(m.chat, caption, wm, v.result.thumb, [
-                ['Mp4', `${usedPrefix}ytv ${v.result.link}`],
-                ['Mp3', `${usedPrefix}yta ${v.result.mp3}`]
-            ], m)
   }
-  }
-}
 handler.help = ['mp4', 'v', ''].map(v => 'yt' + v + ` <url> <without message>`)
 handler.tags = ['downloader']
-handler.command = /^y(outube(mp4|vdl)|t((mp4|v)|vdl))$/i
+handler.command = /^yt(mp4|v)$/i
 
 handler.exp = 0
 handler.register = false
@@ -96,3 +70,4 @@ handler.limit = true
 
 
 export default handler
+
