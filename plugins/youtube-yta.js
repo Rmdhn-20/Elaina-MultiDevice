@@ -31,9 +31,14 @@ let handler = async (m, { conn, args, isPrems, isOwner }) => {
 *${htjava} Title:* ${title}
 *${htjava} Type:* mp3
 *${htjava} Filesize:* ${audio.fileSizeH}
+
+*${htjava} Download from:*
+${args[0]}
+
+
 *L O A D I N G. . .*
 `.trim(), m) // title + '.mp3',
-  if (!isLimit) await conn.sendFile(m.chat, source, title + '.mpeg', `
+  if (!isLimit) await conn.sendFile(m.chat, source, title + '.mp3', `
 *${htki} YOUTUBE ${htka}*
 *${htjava} Title:* ${title}
 *${htjava} Type:* mp3
@@ -45,11 +50,11 @@ ${args[0]}
   })
 }
 handler.help = ['mp3', 'a'].map(v => 'yt' + v + ` <url> <without message>`)
-handler.tags = ['downloader', 'limitmenu']
+handler.tags = ['downloader']
 handler.command = /^yt(a|mp3)$/i
 
 handler.exp = 0
-handler.register = true
+handler.register = false
 handler.limit = true
 
 export default handler
