@@ -9,7 +9,7 @@ import moment from 'moment-timezone'
 import os from 'os'
 import fs from 'fs'
 import fetch from 'node-fetch'
-import { makeWASocket, BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, downloadContentFromMessage, downloadHistory, proto, getMessage, generateWAMessageContent, prepareWAMessageMedia } = (await import('@adiwajshing/baileys')).default
+const { makeWASocket, BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, downloadContentFromMessage, downloadHistory, proto, getMessage, generateWAMessageContent, prepareWAMessageMedia } = (await import('@adiwajshing/baileys')).default
 
 const defaultMenu = {
   before: `
@@ -340,7 +340,7 @@ let tek = `✧────···[ Dashboard ]···────✧
 ╰━━━━━━━━━━━━━━━━┈─◂`
 const listMessage = {
   text: tek,
-  footer: `📮 *Note:* Jika menemukan Bug/Error silahkan laporkan kepada owner:)\nᴍᴀᴅᴇ ᴡɪᴛʜ ❤ ʙʏ ${nameown}\n\n\n${wm2}`,
+  footer: `📮 *Note:* Jika menemukan Bug/Error\nSilahkan laporkan kepada owner:)\nᴍᴀᴅᴇ ᴡɪᴛʜ ❤ ʙʏ ${nameown}\n\n\n${wm2}`,
   mentions: await conn.parseMention(tek),
   title: ``,
   buttonText: `Klik Disini ⎙`, 
@@ -582,7 +582,7 @@ const listMessage = {
   contextInfo: { mentionedJid: [m.sender] }
 }}, { quoted: m
 					})
-*/
+
 //return conn.relayMessage(m.chat, pre.message, { messageId: pre.key.id })
 
 //-------DOC TEMPLATE
@@ -704,7 +704,7 @@ function clockStringP(ms) {
 }
 function ucapan() {
   const time = moment.tz('Asia/Jakarta').format('HH')
-  let res = "Kok Belum Tidur Kak? 🥱"
+  let res = " Belum Tidur Kak? 🥱"
   if (time >= 4) {
     res = "Pagi Lord 🌄"
   }
