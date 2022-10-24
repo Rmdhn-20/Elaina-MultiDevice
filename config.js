@@ -1,5 +1,5 @@
 // S C R I P T  O R I  B Y  Bochilgaming 🔭
-// Ditulis Ulang Oleh ImYanXiao
+// Ditulis Ulang Oleh ImYanXiao & Rmdhn-20
 // Credits, jangan dihapus atau diubah!
 
 // - - THANKS TO - -
@@ -14,6 +14,7 @@
 // • Rasel comel
 // • ImYanXiao
 // • Xtreshe (Beban)
+// • Ekuzika
 // • Dll
 
 //[!] Jangan Lupa Ganti Ownernya
@@ -47,27 +48,36 @@ let wibh = moment.tz('Asia/Jakarta').format('HH')
 /*============== SOCIAL ==============*/
 
 // kalo ga punya ketik "-" atau biarin aja biar ada creditsnya :v
-global.sig = 'https://instagram.com/Xiao_yan_21' //Link Instagrammu
-global.sgh = 'https://github.com/ImYanXiao' //Link Githubmu
-global.sgc = 'https://chat.whatsapp.com/DyBMXDw1IshFM9z0ZHZNlR'
+global.sig = 'https://instagram.com/ekuzikaa_18' //Link Instagrammu
+global.sgh = 'https://github.com/Rmdhn-20' //Link Githubmu
+global.sgc = '-'
 global.sdc = '-' //Isi Pake Link Discordmu Kalo Gada Biarin aja
 global.snh = 'https://nhentai.net/g/HaramTod🗿' //Hmmm, Ini boleh kalian isi terserah :v
 
 /*============== PAYMENT ==============*/
-global.pdana = '085736178354' //Nomor Danamu
-global.ppulsa = '085736178354' //Nomor SimCard Yang Kamu Pake
-global.psaweria = 'https://saweria.com/XiaoYan021' //Link Saweriamu Kalo Nggada Ketik - aja
+global.pdana = '08889616144' //Nomor Danamu
+global.ppulsa = '081310665285' //Nomor SimCard Yang Kamu Pake
+global.psaweria = 'https://saweria.com/Ekuzika' //Link Saweriamu Kalo Nggada Ketik - aja
+global.paypal = 'https://paypal.me/Ekuzika' //Link Paypal mu kalo gada ketik - aja
 
 /*============== NOMOR ==============*/
-global.nomorbot = '6281231079387' //Nomor Bot
-global.nomorown = '6285736178354' //Nomor Owner
-global.namebot = 'Elaina BOT' //Nama Bot
-global.nameown = '𝓧𝓲𝓪𝓸 - 𝓨𝓪𝓷' // Nama Owner
+global.nomorbot = '13479471011' //Nomor Bot
+global.nomorown = '628889616144' //Nomor Owner
+
+/*============== NAMA ==============*/
+global.namebot = 'ʜɪɴᴀᴛᴀ 𝙱𝙾𝚃' // Bot Name Main
+global.namebot2 = 'нιиαтα - ¢нαи'
+global.namebot3 = 'ℌ𝔦𝔫𝔞𝔱𝔞 𝔅𝔬𝔱'
+global.sticname = '★彡 нιиαтα вσт 彡★' // Buat sticker packname
+
+global.nameown = '★ E͙k͙u͙z͙i͙k͙a͙ ★' // Owner Name Main
+
+global.nameown2 = '█║▌║▌║ E̸̖̪̱͚ͨ̀͜k̶̸͙̭̹͆͟û̶͙̽̿͆̈z͕͓̼̼̽̃͘i̵͓͙̱͚̎͟k̶̸͙̭̹͆͟ă̶̸̝ͦ͊̿͋͞ ║▌║▌║█'
 
 
 /*============== STAFF ==============*/
 global.owner = [
-  ['6285736178354', '❦ 𝚇 𝚒 𝚊 𝚘 - 𝚈𝚊𝚗? 🎐', true] //Ganti jd nomormu sama Namamu
+  [`${nomorown}`, `${nameown}`, true] //Ganti jd nomormu sama Namamu (Btw ini udh gw fix biar gausa ganti2 lagi ya nyed >w<)
   // [number, dia creator/owner?, dia developer?]
 ] // Put your number here
 global.mods = [] // Want some help?
@@ -99,12 +109,13 @@ global.APIKeys = { // APIKey Here
 // Kata APIKEY itu isi dengan apikey lu sendiri, dengan beli ke website itu
 
 /*============== WATERMARK ==============*/
-global.wm = '                「 ᴇʟᴀɪɴᴀ 𝙱𝙾𝚃 汉  」' //Main Watermark
-global.wm2 = '꒷︶꒷꒥꒷ ‧₊˚ ꒰ฅ˘ᴇʟᴀɪɴᴀ - ᴄʜᴀɴ˘ฅ ꒱ ‧₊˚꒷︶꒷꒥꒷'
-global.wm3 = '⫹⫺ ᴇʟᴀɪɴᴀ 𝙱𝙾𝚃'
+global.wm = `                   「 ${namebot} 汉  」` //Main Watermark
+global.wm2 = `꒷︶꒷꒥꒷ ‧₊˚ ꒰ฅ˘${namebot2}˘ฅ ꒱ ‧₊˚꒷︶꒷꒥꒷`
+global.wm3 = `⫹⫺ ${namebot3}`
 global.botdate = `⫹⫺ 𝗛𝗮𝗿𝗶: ${week} ${date}`
 global.bottime = `𝗪𝗮𝗸𝘁𝘂 : ${wktuwib}`
-global.titlebot = '🎋 ┊ 𝗥𝗣𝗚 ʙᴏᴛ ᴡʜᴀᴛsᴀᴘᴘ'
+global.timebot = `${wktuwib}`
+global.titlebot = `🎋 ┊ 𝗥𝗣𝗚 ${namebot}`
 global.author = global.wm
 global.logo = 'https://ibb.co/17RY7x9'
 
@@ -330,7 +341,7 @@ global.wait = '```「▰▰▰▱▱▱▱▱▱▱」Loading...```'
 global.eror = '```404 error```'
 global.dtu = 'ɪɴꜱᴛᴀɢʀᴀᴍ'
 global.dtc = 'ᴄᴀʟʟ ᴏᴡɴᴇʀ'
-global.phn = '+62 857-3617-8354'
+global.phn = '+62 888-9616-144'
 
 /*=========== TYPE DOCUMENT ===========*/
 global.dpptx = 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
@@ -343,8 +354,8 @@ global.djson = 'application/json'
 global.thumbdoc = 'https://telegra.ph/file/6e45318d7c76f57e4a8bd.jpg'
 
 /*=========== FAKE SIZE ===========*/
-global.fsizedoc = '99999999999999' // default 10TB
-global.fpagedoc = '999'
+global.fsizedoc = '99999999999' // default 10TB
+global.fpagedoc = '100'
 
 /*=========== HIASAN ===========*/
 // DEFAULT MENU
@@ -370,8 +381,8 @@ global.htjava = '⫹⫺'    //hiasan Doang :v
 global.hsquere = ['⛶','❏','⫹⫺']
 
 /*============== STICKER WM ==============*/
-global.stickpack = '.'
-global.stickauth = `☂︎\n𝗘\nl\na\ni\nn\na\n-\n𝗕\n𝗢\n𝗧\n✦\n\n⫹⫺ Whatsapp BOT\nwa.me/${global.nomorbot}`
+global.stickpack = `Author? ${nameown}`
+global.stickauth = `☂︎ ${sticname}\n✦\n\n⫹⫺ Whatsapp BOT\nwa.me/${global.nomorbot}`
 global.packname = 'Cʀᴇᴀᴛᴇᴅ Bʏ'
 global.packname2 = 'ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴇʟᴀɪɴᴀ ʙᴏᴛᴢ'
 
