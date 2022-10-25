@@ -84,8 +84,8 @@ global.mods = [] // Want some help?
 global.prems = [] // Premium user bukan disini nambahinnya, ketik .addprem @user 10
 
 
-global.lolkey = 'apikeymu'
-global.xkey = 'APIKEYMU'
+global.lolkey = 'e54205a4ca2caa368cc067bb'
+global.xkey = '483b65681fe3dfb7'
 /*============== API ==============*/
 global.APIs = { // API Prefix
   // name: 'https://website'
@@ -100,9 +100,9 @@ global.APIs = { // API Prefix
 }
 global.APIKeys = { // APIKey Here
   // 'https://website': 'apikey'
-  'https://api.xteam.xyz': 'APIKEYMU',
+  'https://api.xteam.xyz': '483b65681fe3dfb7',
   'https://anabotofc.herokuapp.com/': 'AnaBot',
-  'https://api.lolhuman.xyz': 'Apikeymu',
+  'https://api.lolhuman.xyz': 'e54205a4ca2caa368cc067bb',
   'https://zahirr-web.herokuapp.com': 'zahirgans',
   'https://violetics.pw': 'beta'
 }
