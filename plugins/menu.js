@@ -610,7 +610,7 @@ const listMessage = {
       // await conn.sendMessage(m.chat, message, m, { mentionedJid: [m.sender] })
         
         //MAIN MENU
-      conn.sendButton(m.chat, `*${ucapan()}, ${name} 👋*`, text.trim(), `${timeimg()}`, [['Speedtest', _p + 'speedtest'], ['Owner', _p + 'owner']], false, { quoted: fkon, contextInfo: { externalAdReply: { showAdAttribution: true,
+      conn.sendButton(m.chat, `*${ucapan()}, ${name} 👋*`, text.trim(), wm2, `${timeimg()}`, [['Speedtest', _p + 'speedtest'], ['Owner', _p + 'owner']], false, { quoted: fkon, contextInfo: { externalAdReply: { showAdAttribution: true,
     mediaUrl: sig,
     mediaType: 2,
     description: sig, 
