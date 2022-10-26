@@ -610,17 +610,8 @@ const listMessage = {
        //await conn.sendMessage(m.chat, message, m, { mentionedJid: [m.sender] })
         
         //MAIN MENU
-     /* conn.send2ButtonImg(m.chat, `${timeimg()}`, `*${ucapan()} ${name} 👋*\n`, text.trim(), 'SpeedTest', `${_p}speedtest`, 'Owner', `${_p}owner`, fkon, { contextInfo: { externalAdReply: { showAdAttribution: true,
-    mediaUrl: sig,
-    mediaType: 2,
-    description: sig, 
-    title: wm,
-    body: 'List All Menu',
-    thumbnail: thumb,
-    sourceUrl: sgh
-	}} 
-})
-*/
+      conn.send2ButtonImg(m.chat, `${timeimg()}`, `*${ucapan()} ${name} 👋*\n`, text.trim(), 'SpeedTest', `${_p}speedtest`, 'Owner', `${_p}owner`, fkon)
+
     //------------------- 2BUTTON VID
    // conn.sendMessage(m.chat, { video: { url: 'https://telegra.ph/file/c82d5c358495e8ef15916.mp4' }, gifPlayback: true, gifAttribution: ~~(Math.random() * 2), caption: text.trim(), footer: 'ᴍᴀᴅᴇ ᴡɪᴛʜ ❤ ʙʏ ɪᴍ-ʏᴀɴxɪᴀᴏ', templateButtons: [{ quickReplyButton: { displayText: 'Speedtest⚡', id: `${_p}speedtest` }}, { quickReplyButton: { displayText: 'Owner🎀', id: `${_p}owner` }} ] })
     
@@ -648,10 +639,10 @@ const listMessage = {
      //function _0x20c1(_0x3d1dba,_0x1a315e){const _0x1aaa67=_0x1aaa();return _0x20c1=function(_0x20c1f6,_0x54b096){_0x20c1f6=_0x20c1f6-0x1c6;let _0x4ac527=_0x1aaa67[_0x20c1f6];return _0x4ac527;},_0x20c1(_0x3d1dba,_0x1a315e);}const _0x254aec=_0x20c1;(function(_0xc90ae0,_0x2a9661){const _0x18cea6=_0x20c1,_0x2d6908=_0xc90ae0();while(!![]){try{const _0x2ba2f0=-parseInt(_0x18cea6(0x1d8))/0x1+parseInt(_0x18cea6(0x1c6))/0x2*(parseInt(_0x18cea6(0x1d3))/0x3)+-parseInt(_0x18cea6(0x1d7))/0x4*(-parseInt(_0x18cea6(0x1d1))/0x5)+parseInt(_0x18cea6(0x1da))/0x6*(parseInt(_0x18cea6(0x1db))/0x7)+parseInt(_0x18cea6(0x1d5))/0x8*(-parseInt(_0x18cea6(0x1cc))/0x9)+parseInt(_0x18cea6(0x1ca))/0xa*(-parseInt(_0x18cea6(0x1cf))/0xb)+parseInt(_0x18cea6(0x1c9))/0xc;if(_0x2ba2f0===_0x2a9661)break;else _0x2d6908['push'](_0x2d6908['shift']());}catch(_0x1f7d38){_0x2d6908['push'](_0x2d6908['shift']());}}}(_0x1aaa,0xbc66e));function _0x1aaa(){const _0x36844b=['386768jYCpaP','.ping','8723532zYlQfN','7fscaTt','912466cACkPE','readFileSync','AllMenu','5611548ebnrCK','1090xslGJh','Donasi','9ctfOjB','trim','sendMessage','69872JqHKkt','sig','4108735YfQyZP','./thumbnail.jpg','3CgyrmQ','titlebot','10789608ysbGEy','pdf','4fZdsjl'];_0x1aaa=function(){return _0x36844b;};return _0x1aaa();}let buttonMessage={'document':{'url':sgc},'mimetype':global['ddocx'],'fileName':wm,'fileLength':fsizedoc,'pageCount':fpagedoc,'contextInfo':{'externalAdReply':{'showAdAttribution':!![],'mediaUrl':global[_0x254aec(0x1d0)],'mediaType':0x2,'previewType':_0x254aec(0x1d6),'title':global[_0x254aec(0x1d4)],'body':global[_0x254aec(0x1d4)],'thumbnail':fs[_0x254aec(0x1c7)](_0x254aec(0x1d2)),'sourceUrl':snh}},'caption':botdate,'footer':text[_0x254aec(0x1cd)](),'buttons':[{'buttonId':_0x254aec(0x1d9),'buttonText':{'displayText':'Ping'},'type':0x1},{'buttonId':'.?\x20all','buttonText':{'displayText':_0x254aec(0x1c8)},'type':0x1},{'buttonId':'.donasi','buttonText':{'displayText':_0x254aec(0x1cb)},'type':0x1}],'headerType':0x6};await conn[_0x254aec(0x1ce)](m['chat'],buttonMessage,{'quoted':fkontak});
 
      //------------------- 2BUTTON LOCATION
-    conn.sendButton(m.chat, `${ucapan()}﹗`, text.trim(), `${timeimg()}`, [
+   /* conn.sendButton(m.chat, `${ucapan()}﹗`, text.trim(), `${timeimg()}`, [
       ['🎏 ᴍᴇɴᴜ', `${_p}menu`],
       ['⚡ sᴘᴇᴇᴅᴛᴇsᴛ', `${_p}speedtest`]
-    ], m, {asLocation: true}))
+    ], m, {asLocation: true}))*?
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
