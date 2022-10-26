@@ -535,7 +535,7 @@ const listMessage = {
          mediaUrl: sig
         }
      }
-    })
+    })*/
     
     //------------------ DOCUMENT
     let d1 = 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
