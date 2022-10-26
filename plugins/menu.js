@@ -572,7 +572,7 @@ const listMessage = {
             mimetype: td,
             fileLength: fsizedoc,
             pageCount: fpagedoc,
-            caption: text,
+            caption: text.trim(),
             footer: titlebot,
             templateButtons: [
                 {
