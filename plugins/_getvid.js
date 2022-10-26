@@ -1,3 +1,4 @@
+/*
 import { 
     youtubedl,
     youtubedlv2,
@@ -45,3 +46,4 @@ const size = await yt.video[q].fileSizeH
 handler.command = /^(getvid|ytmp4|ytv)$/i
 handler.limit = true
 export default handler
+*/
