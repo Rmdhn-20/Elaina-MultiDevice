@@ -155,7 +155,7 @@ await conn.sendButton(m.chat, caption, wm, v.result.thumb, [
 }
 handler.help = ['mp4', 'v', ''].map(v => 'yt' + v + ` <url> <without message>`)
 handler.tags = ['downloader', 'limitmenu']
-handler.command = /^yt(mp4|v)|mp4)$/i
+handler.command = /^yt(mp4|v)$/i
 
 handler.exp = 0
 handler.register = false
