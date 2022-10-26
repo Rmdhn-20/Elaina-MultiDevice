@@ -610,7 +610,7 @@ const listMessage = {
       // await conn.sendMessage(m.chat, message, m, { mentionedJid: [m.sender] })
         
         //MAIN MENU
-      conn.sendButton(m.chat, `*${ucapan()}, ${name} 👋*`, text.trim(), wm2, `${timeimg()}`, [['Speedtest', _p + 'speedtest'], ['Owner', _p + 'owner']], false, { quoted: fkon, contextInfo: { externalAdReply: { showAdAttribution: true,
+      conn.send2ButtonImg(m.chat, `${timeimg()}`, `*${ucapan()} ${name} 👋*\n`, text.trim(), 'SpeedTest', `${_p}speedtest`, 'Owner', `${_p}owner`, fkon, { contextInfo: { externalAdReply: { showAdAttribution: true,
     mediaUrl: sig,
     mediaType: 2,
     description: sig, 
@@ -618,8 +618,8 @@ const listMessage = {
     body: 'List All Menu',
     thumbnail: thumb,
     sourceUrl: sgh
-}
-} })
+	}} 
+})
 
     //------------------- 2BUTTON VID
    // conn.sendMessage(m.chat, { video: { url: 'https://telegra.ph/file/c82d5c358495e8ef15916.mp4' }, gifPlayback: true, gifAttribution: ~~(Math.random() * 2), caption: text.trim(), footer: 'ᴍᴀᴅᴇ ᴡɪᴛʜ ❤ ʙʏ ɪᴍ-ʏᴀɴxɪᴀᴏ', templateButtons: [{ quickReplyButton: { displayText: 'Speedtest⚡', id: `${_p}speedtest` }}, { quickReplyButton: { displayText: 'Owner🎀', id: `${_p}owner` }} ] })
