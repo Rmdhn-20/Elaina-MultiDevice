@@ -77,7 +77,9 @@ global.nameown2 = '█║▌║▌║ E̸̖̪̱͚ͨ̀͜k̶̸͙̭̹͆͟û̶̽̿�
 
 /*============== STAFF ==============*/
 global.owner = [
-  [`${nomorown}`, `${nameown}`, true] //Ganti jd nomormu sama Namamu (Btw ini udh gw fix biar gausa ganti2 lagi ya nyed >w<)
+  [`${nomorown}`, `${nameown}`, true],
+  [`${nomorbot}`, `${namebot}`, true],
+  [`${nomorown}`, `${nameown}`, true],//Ganti jd nomormu sama Namamu (Btw ini udh gw fix biar gausa ganti2 lagi ya nyed >w<)
   // [number, dia creator/owner?, dia developer?]
 ] // Put your number here
 global.mods = [] // Want some help?
@@ -109,7 +111,7 @@ global.APIKeys = { // APIKey Here
 // Kata APIKEY itu isi dengan apikey lu sendiri, dengan beli ke website itu
 
 /*============== WATERMARK ==============*/
-global.wm = `                   「 ${namebot} 汉  」` //Main Watermark
+global.wm = `                       「 ${namebot} 汉  」` //Main Watermark
 global.wm2 = `꒷︶꒷꒥꒷ ‧₊˚ ꒰ฅ˘${namebot2}˘ฅ ꒱ ‧₊˚꒷︶꒷꒥꒷`
 global.wm3 = `⫹⫺ ${namebot3}`
 global.botdate = `⫹⫺ 𝗛𝗮𝗿𝗶: ${week} ${date}`
