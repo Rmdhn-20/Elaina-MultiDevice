@@ -28,15 +28,15 @@ const defaultMenu = {
 │╭────────────────···
 ┴│    *${ucapan()} %name!*
 ⬡│☂︎ *Tanggal:* %week %weton
-⬡│☂︎ *Date:* ${timebot}
+⬡│☂︎ *Date:* %date
 ⬡│☂︎ *Tanggal Islam:* %dateIslamic
-┬│☂︎ *Waktu:* %time
+┬│☂︎ *Waktu:* ${timebot}
 │╰────────────────···
 ┠─────═[ INFO BOT ]═─────⋆
 │╭────────────────···
 ┴│☂︎ *Nama Bot:* ${namebot}
 ⬡│☂︎ *Mode:* %mode
-⬡│☂︎ *Prefix:* [ *%_p* ]
+⬡│☂︎ *Prefix:* [  *%_p*  ]
 ⬡│☂︎ *Baileys:* Multi Device
 ⬡│☂︎ *Battery:* ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}
 ⬡│☂︎ *Platform:* %platform
@@ -307,7 +307,7 @@ let tek = `✧────···[ Dashboard ]···────✧
 ┴
 │⬡ Aktif selama ${mpt}
 │⬡ Baterai ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}
-│⬡ Prefix : [ ${_p} ]
+│⬡ Prefix : [  ${_p}  ]
 │⬡ *${Object.keys(global.db.data.users).length}* Pengguna
 │⬡ *${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}* Chat Terbanned
 │⬡ *${Object.entries(global.db.data.users).filter(user => user[1].banned).length}* Pengguna Terbanned
@@ -418,7 +418,7 @@ const listMessage = {
  let fdocs = {quoted: { key : { participant : '0@s.whatsapp.net'},message: {documentMessage: {title: `Hai Kak ${name}!`,  jpegThumbnail: fs.readFileSync('./thumbnail.jpg') }}}}
  let fgclink = {quoted: {key: {participant : '0@s.whatsapp.net'},message: {groupInviteMessage: {groupJid: "17608914335-1625305606@g.us",inviteCode: null,groupName: `Hai ${name}!`,  caption: wm,  jpegThumbnail: fs.readFileSync('./thumbnail.jpg') }} }}
  let fgif = {quoted: {key: { participant : '0@s.whatsapp.net'}, message: {  "videoMessage": {  "title": `Hai Kak ${name}!`, "h": `Hmm`, 'seconds': '999999999',  'gifPlayback': 'true',  'caption': wm, 'jpegThumbnail': fs.readFileSync('./thumbnail.jpg') } } } }
- let fkon = { key: { fromMe: false, participant: `${m.sender.split`@`[0]}@s.whatsapp.net`, ...(m.chat ? { remoteJid: '16504228206@s.whatsapp.net' } : {}) }, message: { contactMessage: { displayName: `${name}`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}}
+ let fkon = { key: { fromMe: false, participant: `${m.sender.split`@`[0]}@s.whatsapp.net`, ...(m.chat ? { remoteJid: '628889616144@s.whatsapp.net' } : {}) }, message: { contactMessage: { displayName: `${name}`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}}
  
     let ftoko = {
     key: {
@@ -610,7 +610,7 @@ const listMessage = {
        //await conn.sendMessage(m.chat, message, m, { mentionedJid: [m.sender] })
         
         //MAIN MENU
-      conn.send2ButtonImg(m.chat, `${timeimg()}`, `*${ucapan()} ${name} 👋*\n`, text.trim(), 'SpeedTest', `${_p}speedtest`, 'Owner', `${_p}owner`, fkon)
+      conn.send3ButtonImg(m.chat, `${timeimg()}`, `*${ucapan()} ${name} 👋*\n`, text.trim(), 'SpeedTest 📈', `${_p}speedtest`, 'Owner ♛', `${_p}owner`, 'Source Code 🔖', `${_p}sc`, fkon)
 
     //------------------- 2BUTTON VID
    // conn.sendMessage(m.chat, { video: { url: 'https://telegra.ph/file/c82d5c358495e8ef15916.mp4' }, gifPlayback: true, gifAttribution: ~~(Math.random() * 2), caption: text.trim(), footer: 'ᴍᴀᴅᴇ ᴡɪᴛʜ ❤ ʙʏ ɪᴍ-ʏᴀɴxɪᴀᴏ', templateButtons: [{ quickReplyButton: { displayText: 'Speedtest⚡', id: `${_p}speedtest` }}, { quickReplyButton: { displayText: 'Owner🎀', id: `${_p}owner` }} ] })
@@ -685,16 +685,16 @@ function ucapan() {
   const time = moment.tz('Asia/Jakarta').format('HH')
   let res = "Kok Belum Tidur Kak? 🥱"
   if (time >= 4) {
-    res = "Pagi Lord 🌄"
+    res = "Pagi 🌄"
   }
   if (time >= 10) {
-    res = "Siang Lord ☀️"
+    res = "Siang ☀️"
   }
   if (time >= 15) {
-    res = "Sore Lord 🌇"
+    res = "Sore 🌇"
   }
   if (time >= 18) {
-    res = "Malam Lord 🌙"
+    res = "Malam 🌙"
   }
   return res
 }
