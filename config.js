@@ -77,9 +77,8 @@ global.nameown2 = '█║▌║▌║ E̸̖̪̱͚ͨ̀͜k̶̸͙̭̹͆͟û̶̽̿�
 
 /*============== STAFF ==============*/
 global.owner = [
-  [`${nomorown}`, `${nameown}`, true],
-  [`${nomorbot}`, `${namebot}`, true],
-  [`${nomorown}`, `${nameown}`, true],//Ganti jd nomormu sama Namamu (Btw ini udh gw fix biar gausa ganti2 lagi ya nyed >w<)
+  [`${nomorown}`, `${nameown}`, 'Developer', 'ramadhanart@gmail.com'],
+  [`${nomorbot}`, `${namebot}`, 'Bot', 'ekuzika@gmail.com'] //Ganti jd nomormu sama Namamu (Btw ini udh gw fix biar gausa ganti2 lagi ya nyed >w<)
   // [number, dia creator/owner?, dia developer?]
 ] // Put your number here
 global.mods = [] // Want some help?
