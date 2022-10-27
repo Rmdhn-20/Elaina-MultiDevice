@@ -610,7 +610,7 @@ const listMessage = {
        //await conn.sendMessage(m.chat, message, m, { mentionedJid: [m.sender] })
         
         //MAIN MENU
-      conn.send3ButtonImg(m.chat, await (await fetch(urls)), `*${ucapan()} ${name} 👋*\n`, text.trim(), 'SpeedTest 📈', `${_p}speedtest`, 'Owner ♛', `${_p}owner`, 'Source Code 🔖', `${_p}sc`, fkon)
+      conn.send3ButtonImg(m.chat, await (await fetch(urls)).buffer(), `*${ucapan()} ${name} 👋*\n`, text.trim(), 'SpeedTest 📈', `${_p}speedtest`, 'Owner ♛', `${_p}owner`, 'Source Code 🔖', `${_p}sc`, fkon)
 
     //------------------- 2BUTTON VID
    // conn.sendMessage(m.chat, { video: { url: 'https://telegra.ph/file/c82d5c358495e8ef15916.mp4' }, gifPlayback: true, gifAttribution: ~~(Math.random() * 2), caption: text.trim(), footer: 'ᴍᴀᴅᴇ ᴡɪᴛʜ ❤ ʙʏ ɪᴍ-ʏᴀɴxɪᴀᴏ', templateButtons: [{ quickReplyButton: { displayText: 'Speedtest⚡', id: `${_p}speedtest` }}, { quickReplyButton: { displayText: 'Owner🎀', id: `${_p}owner` }} ] })
